@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <script>
+            function myFunction() {
+              let y = document.getElementById("numb").value;
+              let z = document.getElementById("num").value;
+              let nam = document.getElementById("name").value;
+              document.getElementById("nam").innerHTML = ("Name: "+ nam);
+              let no = document.getElementById("num1").value;
+              document.getElementById("no").innerHTML = ("Number: "+ no);
+              var x;
+              x=z-y;
+              var text;
+              if ( x >0 && x < 100) {
+                text = "Free Current";
+              }  if ( x >101 && x < 200){
+
+                text = x*1.5;
+              }
+              if ( x >201 && x < 500){
+
+              text = x*2;
+             }
+             if ( x >501){
+             text = x*3.5;
+             }
+              document.getElementById("demo").innerHTML = text;
+            }
+            </script>
+
+    </head>
+    <style>
+body{   
+    background-image: linear-gradient(rgb(10, 200, 233),rgb(142, 236, 236),rgb(0, 202, 202),rgb(82, 175, 175)); 
+   
+}
+
+
+
+    </style>
+    <center>
+    <body>
+
+       
+       <form style="border: 1px;color: rgb(21, 4, 4);border-style: solid;width: 30%;border-color: rgb(30, 30, 28);  align-items: center;">
+        <h1>EB BILL CALCULATOR</h1>
+        <br>
+        <br>
+        <br>
+        <label>Customer Name:</label>
+        <input type="text" id="name"> <br> <br>
+        <label>Customer ID:</label>
+        <input type="number" id="num1"> <br> <br>
+        <label  style="margin-top: 3cm;"">Enter Your Previous month Unit(in units):</label>
+        <input id="numb"> <br> <br>
+        <label  style="margin-top: 3cm;"">Enter Your Current month Unit(in units):</label>
+        <input id="num"> <br> <br>
+        <br><br>
+        <center><button style="background-color:rgb(225, 136, 19); width:100px; height:40px;" type="button" onclick="myFunction()">Calculate</button></center>
+        <br><br>
+        <table>
+            
+        </table>   
+     
+        <p id="nam"></p>    
+   
+        <p id="no"></p>
+        <p>Your Bill Amount is(in rupees):</p>
+        <p id="demo"></p>
+
+
+        </form> 
+    </body>
+</center>
+</html>
+
